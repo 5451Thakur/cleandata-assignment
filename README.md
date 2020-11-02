@@ -28,4 +28,5 @@ To execute run_analysis.R the perform the following steps.
 NOTE: The script will only run on Windows OS, if you wish to run on the other system then update the above directory paths compatible with your operating system.
 
 Execute run_analysis.R in the root directory called "UCI HAR Dataset" or whatever name you choose for the same. run_analysis.R will produce "tidy_data.txt" in the root directory.  
+
 For details informtion on the content and format please refer to CodeBook.md 
