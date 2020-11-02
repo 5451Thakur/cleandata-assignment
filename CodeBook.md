@@ -1,8 +1,11 @@
 
 Introduction
+
 This CodeBook describes the data in tidy_data.txt produced by run_analysis.R from the base data available at Ref[1].  The data provided in tidy_data.txt consists of 68 fields combining multiple data files available at Ref[1]. 
 The run_analysis.R converts the Ref[1] data into tidy_data.txt in a comma-separated file format.
+
 Data Fields (tidy_data.txt)
+
 1.	SubjectID (Numeric) - This field provides identity number of each participating subject.  
 2.	Activities - This data fields provides a description of activities performed by each subject.  The following activities are recorded for each subject.
 (a)	"walking" 
