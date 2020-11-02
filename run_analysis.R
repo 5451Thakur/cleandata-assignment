@@ -14,7 +14,7 @@ train_df <- read.table("UCI HAR Dataset\\train\\x_train.txt", header = FALSE)
 train_a_df <- read.table("UCI HAR Dataset\\train\\y_train.txt", header = FALSE)
 train_s_df <- read.table("UCI HAR Dataset\\train\\subject_train.txt", header = FALSE)
 
-test_data <- cbind(test_s_df, test_a_df, test_
+test_data <- cbind(test_s_df, test_a_df, test_df)
 train_data <- cbind(train_s_df, train_a_df, train_df)
 
 combined_data <- rbind(test_data, train_data)
