@@ -1,20 +1,20 @@
 # Extract the features that are having mean and standar deviation values
-features_df <- read.table("features.txt", header = FALSE, stringsAsFactors = FALSE)
+features_df <- read.table("UCI HAR Dataset\\features.txt", header = FALSE, stringsAsFactors = FALSE)
 extractedfeatures <- features_df[(grepl("std|mean[^a-zA-Z]", features_df$V2)), ]
 
 
 # Create a meaningful names for the features that will represent average value fore each subject activity
 extractedfeatures$V3 <- sapply( extractedfeatures$V2, paste0, arg1 = "-Avg-For", "-EachSubjectActivity")
 
-test_df <- read.table("test\\x_test.txt", header = FALSE)
-test_a_df <- read.table("test\\y_test.txt", header = FALSE)
-test_s_df <- read.table("test\\subject_test.txt", header = FALSE)
+test_df <- read.table("UCI HAR Dataset\\test\\x_test.txt", header = FALSE)
+test_a_df <- read.table("UCI HAR Dataset\\test\\y_test.txt", header = FALSE)
+test_s_df <- read.table("UCI HAR Dataset\\test\\subject_test.txt", header = FALSE)
 
-train_df <- read.table("train\\x_train.txt", header = FALSE)
-train_a_df <- read.table("train\\y_train.txt", header = FALSE)
-train_s_df <- read.table("train\\subject_train.txt", header = FALSE)
+train_df <- read.table("UCI HAR Dataset\\train\\x_train.txt", header = FALSE)
+train_a_df <- read.table("UCI HAR Dataset\\train\\y_train.txt", header = FALSE)
+train_s_df <- read.table("UCI HAR Dataset\\train\\subject_train.txt", header = FALSE)
 
-test_data <- cbind(test_s_df, test_a_df, test_df)
+test_data <- cbind(test_s_df, test_a_df, test_
 train_data <- cbind(train_s_df, train_a_df, train_df)
 
 combined_data <- rbind(test_data, train_data)
