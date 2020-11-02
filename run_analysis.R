@@ -20,7 +20,7 @@ train_data <- cbind(train_s_df, train_a_df, train_df)
 combined_data <- rbind(test_data, train_data)
 filtered_data <-  combined_data[, c(1, 2, extractedfeatures[, 1])]
 
-#free-up the memory by removing uneeded objects
+# Remove the objects that are not needed to free-up memory
 rm(train_data, train_df, train_s_df, train_a_df, test_data, test_df, test_a_df, test_s_df, combined_data, features_df )
 
 # Name the columns with descriptive names
@@ -42,4 +42,4 @@ for(i in 1:length(grouped_data)){
   }
 }
 
-write.csv(tidy_data, file = "tidy_data.txt")
+write.table(tidy_data, file = "tidy_data.txt", row.names = FALSE)
